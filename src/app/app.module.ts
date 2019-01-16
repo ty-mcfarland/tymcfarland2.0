@@ -1,3 +1,5 @@
+import { PwaPromptUpdateService } from './services/pwa-prompt-update/pwa-prompt-update-service.service';
+import { PwaCheckForUpdateService } from './services/pwa-check-for-update/pwa-check-for-update.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -26,7 +28,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    PwaCheckForUpdateService,
+    PwaPromptUpdateService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
