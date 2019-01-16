@@ -1,12 +1,22 @@
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { MatListModule } from '@angular/material/list';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        NoopAnimationsModule,
+        MatListModule,
+        MatSidenavModule,
+        RouterTestingModule,
+        ServiceWorkerModule.register('', {
+          enabled: false,
+        })
       ],
       declarations: [
         AppComponent
@@ -24,12 +34,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('tymcfarland2');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to tymcfarland2!');
   });
 });

@@ -32,8 +32,14 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directories
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules/
+dist/
+build/
+.vscode/
+.idea/
+typings/
 jspm_packages/
 
 # TypeScript v1 declaration files

@@ -24,7 +24,8 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ],
             "styles": [
               "src/styles.scss"
@@ -32,6 +33,15 @@
             "scripts": []
           },
           "configurations": {
+            "development": {
+              "optimization": false,
+              "sourceMap": false,
+              "extractCss": false,
+              "namedChunks": false,
+              "aot": false,
+              "extractLicenses": false,
+              "vendorChunk": false
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -54,17 +64,18 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tymcfarland2:build"
+            "browserTarget": "tymcfarland2:build:development"
           },
           "configurations": {
-            "production": {
+            "pwa": {
               "browserTarget": "tymcfarland2:build:production"
             }
           }
@@ -96,7 +107,8 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ]
           }
         },
