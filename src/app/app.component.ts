@@ -1,7 +1,7 @@
 import { environment } from './../environments/environment';
 import { PwaCheckForUpdateService } from './services/pwa-check-for-update/pwa-check-for-update.service';
 import { Component, OnInit } from '@angular/core';
-import { PwaPromptUpdateService } from './services/pwa-prompt-update-service.service';
+import { PwaPromptUpdateService } from './services/pwa-prompt-update/pwa-prompt-update-service.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

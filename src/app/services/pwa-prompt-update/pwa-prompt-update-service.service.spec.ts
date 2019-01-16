@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PwaCheckForUpdateService } from './pwa-check-for-update.service';
+import { PwaPromptUpdateService } from './pwa-prompt-update-service.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-describe('CheckForUpdateService', () => {
+describe('PromptUpdateServiceService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
       ServiceWorkerModule.register('', {
@@ -11,14 +11,14 @@ describe('CheckForUpdateService', () => {
       }),
     ],
     providers: [
-      PwaCheckForUpdateService,
+      PwaPromptUpdateService
     ]
   }));
 
   // beforeEach(() => ServiceWorkerModule.register('', { enabled: false }));
 
   it('should be created', () => {
-    const service: PwaCheckForUpdateService = TestBed.get(PwaCheckForUpdateService);
+    const service: PwaPromptUpdateService = TestBed.get(PwaPromptUpdateService);
     expect(service).toBeTruthy();
   });
 });

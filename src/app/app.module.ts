@@ -1,4 +1,4 @@
-import { PwaPromptUpdateService } from './services/pwa-prompt-update-service.service';
+import { PwaPromptUpdateService } from './services/pwa-prompt-update/pwa-prompt-update-service.service';
 import { PwaCheckForUpdateService } from './services/pwa-check-for-update/pwa-check-for-update.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
