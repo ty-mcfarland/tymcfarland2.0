@@ -7,15 +7,15 @@
     <img class="avatar" src="../assets/ty_christmas.jpg">
   </div>
   <mat-nav-list>
-    <a mat-list-item>Home</a>
-    <a mat-list-item>About</a>
-    <a mat-list-item>Experience</a>
-    <a mat-list-item>References</a>
-    <a mat-list-item>Contact</a>
+    <a mat-list-item [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
+    <a mat-list-item [routerLink]="['/about']" routerLinkActive="router-link-active" >About</a>
+    <a mat-list-item [routerLink]="['/experience']" routerLinkActive="router-link-active" >Experience</a>
+    <a mat-list-item [routerLink]="['/references']" routerLinkActive="router-link-active" >References</a>
+    <a mat-list-item [routerLink]="['/contact']" routerLinkActive="router-link-active" >Contact</a>
   </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <button mat-button (click)="sidenav.toggle()">Toggle</button>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<router-outlet></router-outlet>

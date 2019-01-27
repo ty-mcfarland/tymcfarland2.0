@@ -12,10 +12,21 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { ReferencesComponent } from './components/references/references.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { RouterService } from './services/router/router.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ExperienceComponent,
+    ReferencesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule.withServerTransition({
@@ -31,6 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [
     PwaCheckForUpdateService,
     PwaPromptUpdateService,
+    RouterService,
   ],
   bootstrap: [AppComponent]
 })

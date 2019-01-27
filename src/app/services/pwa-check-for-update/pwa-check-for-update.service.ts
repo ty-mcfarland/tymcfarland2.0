@@ -15,7 +15,7 @@ export class PwaCheckForUpdateService {
   }
   init() {
     const appIsStable$ = this.appRef.isStable.pipe(first(isStable => isStable === true));
-    const everyTenMinutes$ = interval(1000 * 10);
+    const everyTenMinutes$ = interval(1000 * 10 * 60);
     const everyTenMinutesOnceAppIsStable$ = concat(appIsStable$, everyTenMinutes$);
 
     everyTenMinutesOnceAppIsStable$.subscribe(() => {
