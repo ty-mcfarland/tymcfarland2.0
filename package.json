@@ -13,6 +13,7 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:universal",
     "serve:ssr": "node dist/server.js",
     "serve:pwa": "ng build --prod && http-server -p 8080 -c-1 dist/browser",
+    "test": "ng test",
     "build-universal": "npm run build:ssr && npm run serve:ssr",
     "build:client-and-server-bundles": "ng build --prod && ng run tymcfarland2:server",
     "webpack:universal": "webpack --config webpack.universal.config.js --progress --colors"
