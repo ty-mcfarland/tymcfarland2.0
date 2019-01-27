@@ -41,6 +41,7 @@ build/
 .idea/
 typings/
 jspm_packages/
+reports/
 
 # TypeScript v1 declaration files
 typings/
